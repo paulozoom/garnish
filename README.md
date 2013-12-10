@@ -13,6 +13,54 @@ Garnish is a collection of Sass mixins and functions designed to make your life 
 
 When you first import Garnish into your project, it doesn’t add any additional code to it. Garnish is a toolbox, and you only use what you want. It doesn’t contain any pre-defined styles, and makes no decisions for you.
 
+### Border Sandwich
+
+Helps to create top and bottom borders on elements
+
+### Default Usage
+You can define the sandwich with a regular border definition  
+
+```SCSS
+// SCSS
+.pineapple-wedges {
+  @include border-sandwich(1px solid #F0AE3D);
+}
+
+.lime-wedges {
+  @include border-sandwich(1px solid #F0AE3D, true);
+}
+
+//CSS
+.pineapple-wedges { border-bottom: $border; }
+.pineapple-wedges:first-of-type { border-top: $border; }
+
+.lime-wedges:not(:first-of-type) { border-top: $border; }
+```
+
+Which give the following result  
+\----------------------------  
+  First Item  
+\----------------------------  
+  Second Item  
+\----------------------------  
+  Third Item  
+\----------------------------  
+
+### Just Filling Usage
+
+To make this border sandwich just have filling, simply add a true argument to the end of your @include  
+
+```SCSS
+@include border-sandwich(1px solid black, true)
+```
+
+  First Item  
+\----------------------------  
+  Second Item  
+\----------------------------  
+  Third Item  
+
+
 ### Grayscale Colours
 Function that outputs gray colours based on percentage of lightness.
 
