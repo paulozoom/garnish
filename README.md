@@ -13,7 +13,7 @@ Garnish for your Sassy CSS cocktails. Use it on top of [Bourbon](http://bourbon.
 Function that outputs gray colours based on percentage of lightness.
 
 ```SCSS
-// CSS
+// SCSS
 .margarita-salt { color: gray(40%); }
 .simple-syrup   { color: gray(97%); }
 
