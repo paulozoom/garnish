@@ -2,12 +2,12 @@
 
 Garnish for your Sassy CSS cocktails. Made to be used on top of [Bourbon](http://bourbon.io).
 
-## Usage
+## Installation
 
 1. [Download as zip](https://github.com/paulozoom/garnish/archive/master.zip). (Bower coming soon)
 2. Include Garnish in your code with `@include "src/garnish"`
 
-## Included Mixins
+## Usage
 
 ### Helpers
 
