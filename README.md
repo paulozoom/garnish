@@ -11,7 +11,7 @@ Garnish for your Sassy CSS cocktails. Made to be used on top of [Bourbon](http:/
 
 ### Helpers
 
-**Grayscale Colours**
+**Grayscale Colours**  
 This is a function which acts on a colour value to return a greyscale version. You can vary the lightness by a percentage going from darkest at 0% to lightest at 100%.
 
 ```SCSS
