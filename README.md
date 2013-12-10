@@ -20,6 +20,18 @@ A simple mixin to create gray colours at varying degrees of lightness
 }
 ```
 
+**Hover Fix for Leopard**  
+This will add :hover and :focus states to whatever content you add to the @include
+
+```SCSS
+.mint {
+  color: #4183C4;
+  @include hover {
+    color: #333;
+  }
+}
+```
+
 ## Development
 
 ### Rules
