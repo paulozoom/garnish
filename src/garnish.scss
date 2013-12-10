@@ -1,13 +1,13 @@
 // misc helpers
-@include "helpers/gray";
-@include "helpers/hover";
+@import "helpers/gray";
+@import "helpers/hover";
 
 // layout
-@include "layout/margin";
-@include "layout/padding";
+@import "layout/margin";
+@import "layout/padding";
 
 // typography
-@include "typography/hyphenated";
+@import "typography/hyphenated";
 
 // media queries
-@include "mediaqueries/media";
+@import "mediaqueries/media";
