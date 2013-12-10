@@ -15,10 +15,7 @@ When you first import Garnish into your project, it doesn’t add any additional
 
 ### Border Sandwich
 
-Helps to create top and bottom borders on elements
-
-### Default Usage
-You can define the sandwich with a regular border definition  
+Helps to create top and bottom borders on elements.
 
 ```SCSS
 // SCSS
@@ -26,6 +23,7 @@ You can define the sandwich with a regular border definition
   @include border-sandwich(1px solid #F0AE3D);
 }
 
+// Set the $breadless to true after your style declaration to remove top and bottom borders on the first and last elements
 .lime-wedges {
   @include border-sandwich(1px solid #F0AE3D, true);
 }
@@ -37,7 +35,7 @@ You can define the sandwich with a regular border definition
 .lime-wedges:not(:first-of-type) { border-top: $border; }
 ```
 
-Which give the following result  
+**Default Sandwich**  
 \----------------------------  
   First Item  
 \----------------------------  
@@ -46,14 +44,8 @@ Which give the following result
   Third Item  
 \----------------------------  
 
-### Just Filling Usage
 
-To make this border sandwich just have filling, simply add a true argument to the end of your @include  
-
-```SCSS
-@include border-sandwich(1px solid black, true)
-```
-
+** Breadless **  
   First Item  
 \----------------------------  
   Second Item  
