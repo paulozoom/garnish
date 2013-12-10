@@ -1,0 +1,6 @@
+// V/H Margin
+@mixin margin-h($val) { margin-left: $val;  margin-right: $val; }
+@mixin margin-v($val) { margin-top: $val;   margin-bottom: $val; }
+
+// Center a block element
+@mixin centered { @include margin-h(auto); }

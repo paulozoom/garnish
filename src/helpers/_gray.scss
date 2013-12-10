@@ -1,0 +1,4 @@
+// Grayscale colors
+@function gray($lightness) {
+  @return hsl(0, 0%, $lightness);
+}

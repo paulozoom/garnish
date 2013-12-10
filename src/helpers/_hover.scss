@@ -1,0 +1,7 @@
+// Improved :hover for keyboard navigation
+@mixin hover {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
