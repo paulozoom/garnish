@@ -7,7 +7,11 @@ Garnish for your Sassy CSS cocktails. Use it on top of [Bourbon](http://bourbon.
 1. Install with `bower install garnish` or [download as zip](https://github.com/paulozoom/garnish/archive/master.zip)
 2. Include Garnish in your code with `@include "src/garnish"`
 
-## Usage
+## Features
+
+Garnish is a collection of Sass mixins and functions designed to make your life a tiny bit easier.
+
+When you first import Garnish into your project, it doesn’t add any additional code to it. Garnish is a toolbox, and you only use what you want. It doesn’t contain any pre-defined styles, and makes no decisions for you.
 
 ### Grayscale Colours
 Function that outputs gray colours based on percentage of lightness.
