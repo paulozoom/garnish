@@ -24,7 +24,7 @@ Helps to create top and bottom borders on elements.
 }
 
 // Set the $breadless to true after your style declaration to remove top and bottom borders on the first and last elements
-.lime-wedges {
+.lemon-wedges {
   @include border-sandwich(1px solid #F0AE3D, true);
 }
 
@@ -32,7 +32,7 @@ Helps to create top and bottom borders on elements.
 .pineapple-wedges { border-bottom: $border; }
 .pineapple-wedges:first-of-type { border-top: $border; }
 
-.lime-wedges:not(:first-of-type) { border-top: $border; }
+.lemon-wedges:not(:first-of-type) { border-top: $border; }
 ```
 
 **Default Sandwich**  
@@ -46,11 +46,11 @@ Helps to create top and bottom borders on elements.
 
 
 ** Breadless **  
-  First Item  
+  :lemon: Wedge  
 \----------------------------  
-  Second Item  
+  :lemon: Wedge  
 \----------------------------  
-  Third Item  
+  :lemon: Wedge  
 
 
 ### Grayscale Colours
