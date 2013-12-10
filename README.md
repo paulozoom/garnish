@@ -12,11 +12,11 @@ Garnish for your Sassy CSS cocktails. Made to be used on top of [Bourbon](http:/
 ### Helpers
 
 **Grayscale Colours**  
-This is a function which acts on a colour value to return a greyscale version. You can vary the lightness by a percentage going from darkest at 0% to lightest at 100%.
+A simple mixin to create gray colours at varying degrees of lightness
 
 ```SCSS
 .margarita-salt {
-  color: gray(#7ED162, 40%);
+  color: gray(40%);
 }
 ```
 
