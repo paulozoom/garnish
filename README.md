@@ -1,6 +1,6 @@
 # Garnish
 
-Garnish for your Sassy CSS cocktails. Use it on top of [Bourbon](http://bourbon.io), or eat it raw.
+Garnish for your Sassy CSS cocktails. Use it on top of [Bourbon](http://bourbon.io), or have it raw.
 
 ## Installation
 
@@ -64,7 +64,7 @@ Example:
 
 ### Readable Media Queries
 
-Make your media queries more understandeable with `media-upto`, `media-between`, and `media-from` block mixins.
+Friendly media queries with `media-upto`, `media-between`, and `media-from` block mixins.
 
 ```scss
 // SCSS
