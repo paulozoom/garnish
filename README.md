@@ -10,12 +10,16 @@ Garnish for your Sassy CSS cocktails. Use it on top of [Bourbon](http://bourbon.
 ## Usage
 
 ### Grayscale Colours
-Function to create gray colours at varying degrees of lightness.
+Function that outputs gray colours based on percentage of lightness.
 
 ```SCSS
-.margarita-salt {
-  color: gray(40%);
-}
+// CSS
+.margarita-salt { color: gray(40%); }
+.simple-syrup   { color: gray(97%); }
+
+// CSS
+.margarita-salt { color: #666666; }
+.simple-syrup   { color: #f7f7f7; }
 ```
 
 ### Combined Hover/Focus styles
@@ -23,11 +27,19 @@ Function to create gray colours at varying degrees of lightness.
 Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` and `:focus` states.
 
 ```SCSS
+// SCSS
 .mint {
   color: #4183C4;
-  @include hover {
-    color: #333;
-  }
+  @include hover { color: #333333; }
+}
+
+// CSS
+.mint {
+  color: #4183C4;
+}
+.mint:hover,
+.mint:focus {
+  color: #333333;
 }
 ```
 
