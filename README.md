@@ -12,7 +12,7 @@ Garnish for your Sassy CSS cocktails. Use it on top of [Bourbon](http://bourbon.
 ### Helpers
 
 **Grayscale Colours**  
-A simple mixin to create gray colours at varying degrees of lightness
+A simple mixin to create gray colours at varying degrees of lightness.
 
 ```SCSS
 .margarita-salt {
@@ -36,8 +36,8 @@ Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` 
 
 ### Guidelines
 
-- Garnish **should be** library-agnostic (although Bourbon is encouraged), and it **should not** replicate Bourbon’s functionality.
-- Garnish **should not** create any output without being called. All code should be mixins and functions.
+- Garnish **should be** library-agnostic, but it **should not** replicate Bourbon’s functionality.
+- Garnish **should not** produce any output unless its functions and mixins are used.
 - Garnish **should not** make style decisions or assumptions. Defaults are OK, but allow configuration.
 
 ### Contributing
