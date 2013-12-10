@@ -20,8 +20,8 @@ A simple mixin to create gray colours at varying degrees of lightness
 }
 ```
 
-**Hover Fix for Leopard**  
-This will add `:hover` and `:focus` states to whatever content you add to the `@include` to.
+**Combined Hover/Focus styles**  
+Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` and `:focus` states.
 
 ```SCSS
 .mint {
