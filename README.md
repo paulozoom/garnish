@@ -19,11 +19,11 @@ Function that outputs gray colours based on percentage of lightness.
 ```SCSS
 // SCSS
 .margarita-salt { color: gray(40%); }
-.simple-syrup   { color: gray(97%); }
+.olive   { color: gray(97%); }
 
 // CSS
 .margarita-salt { color: #666666; }
-.simple-syrup   { color: #f7f7f7; }
+.olive   { color: #f7f7f7; }
 ```
 
 ### Combined Hover/Focus styles
