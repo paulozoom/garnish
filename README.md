@@ -84,7 +84,7 @@ Friendly media queries with `media-upto`, `media-between`, and `media-from` bloc
 
 ```scss
 // SCSS
-h1 {
+.cherry-jar-title {
   @include media-upto(500px)            { font-size: 14px; }
   @include media-between(500px, 900px)  { font-size: 18px; }
   @include media-from(900px)            { font-size: 22px; }
@@ -92,15 +92,40 @@ h1 {
 
 // Output
 @media screen and (max-width: 499px) {
-  h1 { font-size: 14px; }
+  .cherry-jar-title { font-size: 14px; }
 }
 
 @media screen and (min-width: 500px) and (max-width: 899px) {
-  h1 { font-size: 18px; }
+  .cherry-jar-title { font-size: 18px; }
 }
 
 @media screen and (min-width: 900px) {
-  h1 { font-size: 22px; }
+  .cherry-jar-title { font-size: 22px; }
+}
+```
+
+
+### Hyphenation
+
+Add all the vendor prefixes for hyphenation easily. 
+
+```scss
+// SCSS
+.cocktail-description { @include hyphenated; }
+.cocktail-title-long { @include hyphenated(manual); }
+
+// Output
+.cocktail-description {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+.cocktail-title-long {
+  -webkit-hyphens: manual;
+     -moz-hyphens: manual;
+      -ms-hyphens: manual;
+          hyphens: manual;
 }
 ```
 
