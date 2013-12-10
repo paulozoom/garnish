@@ -1,6 +1,6 @@
 # Garnish
 
-Garnish for your Sassy CSS cocktails. Made to be used on top of [Bourbon](http://bourbon.io).
+Garnish for your Sassy CSS cocktails. Use it on top of [Bourbon](http://bourbon.io), or eat it raw.
 
 ## Installation
 
@@ -34,7 +34,7 @@ Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` 
 
 ## Development
 
-### Rules
+### Guidelines
 
 - Including Garnish should create no output. All code should be mixins and functions.
 - Garnish code should make no style decisions or assumptions. Defaults are OK.
