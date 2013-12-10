@@ -1,0 +1,19 @@
+{
+  "name": "garnish",
+  "homepage": "https://github.com/paulozoom/garnish",
+  "description": "Garnish for your Sassy CSS cocktails.",
+  "main": "src/garnish.scss",
+  "keywords": [
+    "sass",
+    "scss",
+    "bourbon"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
