@@ -37,15 +37,15 @@ Helps to create top and bottom borders on elements.
 
 **Default Sandwich**  
 \----------------------------  
-  :pineapple: Wedge
+  :pineapple: Wedge  
 \----------------------------  
-  :pineapple: Wedge
+  :pineapple: Wedge  
 \----------------------------  
   :pineapple: Wedge  
 \----------------------------  
 
 
-** Breadless **  
+**Breadless**  
   :lemon: Wedge  
 \----------------------------  
   :lemon: Wedge  
