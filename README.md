@@ -13,60 +13,21 @@ Garnish is a collection of Sass mixins and functions designed to make your life 
 
 When you first import Garnish into your project, it doesn’t add any additional code to it. Garnish is a toolbox, and you only use what you want. It doesn’t contain any pre-defined styles, and makes no decisions for you.
 
-### Border Sandwich
 
-Helps to create top and bottom borders on elements.
-
-```SCSS
-// SCSS
-.pineapple-wedges {
-  @include border-sandwich(1px solid #F0AE3D);
-}
-
-// Set the $breadless to true after your style declaration to remove top and bottom borders on the first and last elements
-.lemon-wedges {
-  @include border-sandwich(1px solid #F0AE3D, true);
-}
-
-//CSS
-.pineapple-wedges { border-bottom: $border; }
-.pineapple-wedges:first-of-type { border-top: $border; }
-
-.lemon-wedges:not(:first-of-type) { border-top: $border; }
-```
-
-**Default Sandwich**  
-\----------------------------  
-  :pineapple: Wedge  
-\----------------------------  
-  :pineapple: Wedge  
-\----------------------------  
-  :pineapple: Wedge  
-\----------------------------  
-
-
-**Breadless**  
-  :lemon: Wedge  
-\----------------------------  
-  :lemon: Wedge  
-\----------------------------  
-  :lemon: Wedge  
-
-
-### Grayscale Colours
+### Helper: Grayscale Colours
 Function that outputs gray colours based on percentage of lightness.
 
 ```SCSS
 // SCSS
 .margarita-salt { color: gray(40%); }
-.olive   { color: gray(97%); }
+.olive          { color: gray(97%); }
 
 // CSS
 .margarita-salt { color: #666666; }
-.olive   { color: #f7f7f7; }
+.olive          { color: #f7f7f7; }
 ```
 
-### Combined Hover/Focus styles
+### Helper: Combined Hover/Focus styles
 
 Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` and `:focus` states.
 
@@ -87,7 +48,33 @@ Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` 
 }
 ```
 
-### Side Margin, Side Padding, Centering
+### Helper: Readable Media Queries
+
+Friendly media queries with `media-upto`, `media-between`, and `media-from` block mixins.
+
+```scss
+// SCSS
+.cherry-jar-title {
+  @include media-upto(500px)            { font-size: 14px; }
+  @include media-between(500px, 900px)  { font-size: 18px; }
+  @include media-from(900px)            { font-size: 22px; }
+}
+
+// Output
+@media screen and (max-width: 499px) {
+  .cherry-jar-title { font-size: 14px; }
+}
+
+@media screen and (min-width: 500px) and (max-width: 899px) {
+  .cherry-jar-title { font-size: 18px; }
+}
+
+@media screen and (min-width: 900px) {
+  .cherry-jar-title { font-size: 22px; }
+}
+```
+
+### Layout: Side Margin, Side Padding, Centering
 
 Short syntax mixins for either horizontal or vertical margin/padding, but not both.
 
@@ -117,35 +104,48 @@ Example:
 }
 ```
 
+### Style: Border Sandwich
 
-### Readable Media Queries
+Helps to create top and bottom dividers on a series of elements of the same type.
 
-Friendly media queries with `media-upto`, `media-between`, and `media-from` block mixins.
-
-```scss
+```SCSS
 // SCSS
-.cherry-jar-title {
-  @include media-upto(500px)            { font-size: 14px; }
-  @include media-between(500px, 900px)  { font-size: 18px; }
-  @include media-from(900px)            { font-size: 22px; }
+.pineapple-wedges {
+  @include border-sandwich(1px solid #F0AE3D);
 }
 
-// Output
-@media screen and (max-width: 499px) {
-  .cherry-jar-title { font-size: 14px; }
+// Set the $breadless to true to remove outer borders
+.lemon-wedges {
+  @include border-sandwich(1px solid #FCF54C, true);
 }
 
-@media screen and (min-width: 500px) and (max-width: 899px) {
-  .cherry-jar-title { font-size: 18px; }
-}
+//CSS
+.pineapple-wedges                 { border-bottom:  1px solid #F0AE3D; }
+.pineapple-wedges:first-of-type   { border-top:     1px solid #F0AE3D; }
 
-@media screen and (min-width: 900px) {
-  .cherry-jar-title { font-size: 22px; }
-}
+.lemon-wedges:not(:first-of-type) { border-top:     1px solid #FCF54C; }
 ```
 
+**Default Border Sandwich:**
 
-### Hyphenation
+\----------------------------  
+  :pineapple: wedge  
+\----------------------------  
+  :pineapple: wedge  
+\----------------------------  
+  :pineapple: wedge  
+\----------------------------  
+
+
+**Breadless Border Sandwich:**
+
+  :lemon: wedge  
+\----------------------------  
+  :lemon: wedge  
+\----------------------------  
+  :lemon: wedge  
+
+### Typography: Hyphenation
 
 Add all the vendor prefixes for hyphenation easily. 
 
