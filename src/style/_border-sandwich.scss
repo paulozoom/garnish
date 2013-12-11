@@ -1,0 +1,13 @@
+// Creates top and bottom border on one or a group of elements
+@mixin border-sandwich($border, $breadless: false) {
+  @if ($breadless) {
+    &:not(:first-of-type) { 
+      border-top: $border;
+    }
+  } @else {
+    border-bottom: $border;
+    &:first-of-type {
+      border-top: $border;
+    }
+  }
+}

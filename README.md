@@ -13,20 +13,21 @@ Garnish is a collection of Sass mixins and functions designed to make your life 
 
 When you first import Garnish into your project, it doesn’t add any additional code to it. Garnish is a toolbox, and you only use what you want. It doesn’t contain any pre-defined styles, and makes no decisions for you.
 
-### Grayscale Colours
+
+### Helper: Grayscale Colours
 Function that outputs gray colours based on percentage of lightness.
 
 ```SCSS
 // SCSS
 .margarita-salt { color: gray(40%); }
-.simple-syrup   { color: gray(97%); }
+.olive          { color: gray(97%); }
 
 // CSS
 .margarita-salt { color: #666666; }
-.simple-syrup   { color: #f7f7f7; }
+.olive          { color: #f7f7f7; }
 ```
 
-### Combined Hover/Focus styles
+### Helper: Combined Hover/Focus styles
 
 Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` and `:focus` states.
 
@@ -47,7 +48,33 @@ Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` 
 }
 ```
 
-### Side Margin, Side Padding, Centering
+### Helper: Readable Media Queries
+
+Friendly media queries with `media-upto`, `media-between`, and `media-from` block mixins.
+
+```scss
+// SCSS
+.cherry-jar-title {
+  @include media-upto(500px)            { font-size: 14px; }
+  @include media-between(500px, 900px)  { font-size: 18px; }
+  @include media-from(900px)            { font-size: 22px; }
+}
+
+// Output
+@media screen and (max-width: 499px) {
+  .cherry-jar-title { font-size: 14px; }
+}
+
+@media screen and (min-width: 500px) and (max-width: 899px) {
+  .cherry-jar-title { font-size: 18px; }
+}
+
+@media screen and (min-width: 900px) {
+  .cherry-jar-title { font-size: 22px; }
+}
+```
+
+### Layout: Side Margin, Side Padding, Centering
 
 Short syntax mixins for either horizontal or vertical margin/padding, but not both.
 
@@ -77,30 +104,71 @@ Example:
 }
 ```
 
+### Style: Border Sandwich
 
-### Readable Media Queries
+Helps to create top and bottom dividers on a series of elements of the same type.
 
-Friendly media queries with `media-upto`, `media-between`, and `media-from` block mixins.
+```SCSS
+// SCSS
+.pineapple-wedges {
+  @include border-sandwich(1px solid #F0AE3D);
+}
+
+// Set the $breadless to true to remove outer borders
+.lemon-wedges {
+  @include border-sandwich(1px solid #FCF54C, true);
+}
+
+//CSS
+.pineapple-wedges                 { border-bottom:  1px solid #F0AE3D; }
+.pineapple-wedges:first-of-type   { border-top:     1px solid #F0AE3D; }
+
+.lemon-wedges:not(:first-of-type) { border-top:     1px solid #FCF54C; }
+```
+
+**Default Border Sandwich:**
+
+\----------------------------  
+  :pineapple: wedge  
+\----------------------------  
+  :pineapple: wedge  
+\----------------------------  
+  :pineapple: wedge  
+\----------------------------  
+
+
+**Breadless Border Sandwich:**
+
+  :lemon: wedge  
+\----------------------------  
+  :lemon: wedge  
+\----------------------------  
+  :lemon: wedge  
+
+**Support (Desktop):** Chrome 1.0+, Firefox 3.5+, IE 9.0+, Opera 9.5+, Safari 3.2+  
+**Support (Mobile):** Android 2.1+, Firefox Mobile 1.0+, IE Mobile 9.0+, Opera Mobile 10.0+, Safari Mobile 3.2+
+
+### Typography: Hyphenation
+
+Add all the vendor prefixes for hyphenation easily. 
 
 ```scss
 // SCSS
-h1 {
-  @include media-upto(500px)            { font-size: 14px; }
-  @include media-between(500px, 900px)  { font-size: 18px; }
-  @include media-from(900px)            { font-size: 22px; }
-}
+.cocktail-description { @include hyphenated; }
+.cocktail-title-long { @include hyphenated(manual); }
 
 // Output
-@media screen and (max-width: 499px) {
-  h1 { font-size: 14px; }
+.cocktail-description {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
-
-@media screen and (min-width: 500px) and (max-width: 899px) {
-  h1 { font-size: 18px; }
-}
-
-@media screen and (min-width: 900px) {
-  h1 { font-size: 22px; }
+.cocktail-title-long {
+  -webkit-hyphens: manual;
+     -moz-hyphens: manual;
+      -ms-hyphens: manual;
+          hyphens: manual;
 }
 ```
 
