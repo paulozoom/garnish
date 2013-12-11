@@ -1,7 +1,7 @@
 // misc helpers
-@import "helpers/border-sandwich";
 @import "helpers/gray";
 @import "helpers/hover";
+@import "helpers/media";
 
 // layout
 @import "layout/margin";
@@ -10,5 +10,5 @@
 // typography
 @import "typography/hyphenated";
 
-// media queries
-@import "mediaqueries/media";
+// style
+@import "style/border-sandwich";
