@@ -145,6 +145,9 @@ Helps to create top and bottom dividers on a series of elements of the same type
 \----------------------------  
   :lemon: wedge  
 
+**Support (Desktop):** Chrome 1.0+, Firefox 3.5+, IE 9.0+, Opera 9.5+, Safari 3.2+  
+**Support (Mobile):** Android 2.1+, Firefox Mobile 1.0+, IE Mobile 9.0+, Opera Mobile 10.0+, Safari Mobile 3.2+
+
 ### Typography: Hyphenation
 
 Add all the vendor prefixes for hyphenation easily. 
