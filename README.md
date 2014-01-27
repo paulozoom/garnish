@@ -24,8 +24,8 @@ When you first import Garnish into your project, it doesn’t add any additional
 * **[Style](#style)**
   * [Border Sandwich](#border-sandwich)
 * **[Typography](#typography)**
-  * [Weights](#typography-weights)
-  * [Hyphenation](#typography-hyphenation)
+  * [Weights](#weights)
+  * [Hyphenation](#hyphenation)
 
 ----
 
