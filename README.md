@@ -150,6 +150,36 @@ Helps to create top and bottom dividers on a series of elements of the same type
 * Desktop: Chrome 1.0+, Firefox 3.5+, IE 9.0+, Opera 9.5+, Safari 3.2+  
 * Mobile: Android 2.1+, Firefox Mobile 1.0+, IE Mobile 9.0+, Opera Mobile 10.0+, Safari Mobile 3.2+
 
+### Typography: Weights
+
+Keyword-based font-weight function. Based on Typekit’s most weight-rich typefaces.
+
+```scss
+// SCSS
+strong {
+  font-weight: weight(semibold);
+}
+
+// Output
+strong {
+  font-weight: 600;
+}
+```
+
+Reference:
+
+| Keyword             | Weight |
+| ------------------- | ------ |
+| `thin`              | 100    |
+| `extralight`        | 200    |
+| `light`             | 300    |
+| `book` or `regular` | 400    |
+| `medium`            | 500    |
+| `semibold`          | 600    |
+| `bold`              | 700    |
+| `extrabold`         | 800    |
+| `black`             | 900    |
+
 ### Typography: Hyphenation
 
 Add all the vendor prefixes for hyphenation easily. 

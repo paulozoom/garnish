@@ -1,0 +1,13 @@
+@function weight($keyword) {
+  @if      $keyword == thin                           { @return 100; }
+  @else if $keyword == extralight                     { @return 200; }
+  @else if $keyword == light                          { @return 300; }
+  @else if $keyword == book or $keyword == regular    { @return 400; }
+  @else if $keyword == medium                         { @return 500; }
+  @else if $keyword == semibold                       { @return 600; }
+  @else if $keyword == bold                           { @return 700; }
+  @else if $keyword == extrabold                      { @return 800; }
+  @else if $keyword == black                          { @return 900; }
+  
+  @return 400;
+}
