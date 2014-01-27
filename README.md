@@ -20,6 +20,7 @@ When you first import Garnish into your project, it doesn’t add any additional
   * [Readable Media Queries](#readable-media-queries)
 * **[Layout](#layout)**
   * [Side Margin, Side Padding, Centering](#side-margin-side-padding-centering)
+  * [Simple Grid](#simple-grid)
 * **[Style](#style)**
   * [Border Sandwich](#border-sandwich)
 * **[Typography](#typography)**
@@ -121,6 +122,21 @@ Example:
 /* Alternative: single declaration, but with vertical values */
 .box {
   padding: 0 1em;
+}
+```
+
+#### Simple Grid
+
+Makes a percentage-based grid in one mixin call, with optional vertical gutter (3% by default). Columns must be children of the element within which the mixin is called from.
+
+````scss
+// Make a 4 column grid with 3% gutters (horizontal and vertical)
+.container {
+  @include simple-grid(4);
+}
+// Make a 6 column grid with 5% gutters and no vertical gutter
+.container {
+  @include simple-grid(6, 5%, false);
 }
 ```
 

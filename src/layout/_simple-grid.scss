@@ -1,0 +1,26 @@
+// Creates a fluid grid, with $columns columns with a percentage $gutter
+@mixin simple-grid($columns, $gutter: 3%, $float: left, $vertical-gutter: true) {
+  
+  @include clearfix;
+
+  > * {
+    float: $float;
+    margin-#{$float}: $gutter;
+
+    width: (100% - ($columns - 1) * $gutter) / $columns;
+    
+    // Clear first of each row
+    &:nth-child(#{$columns}n+1) {
+      clear: $float;
+      margin-#{$float}: 0;
+    }
+    
+    // Add a margin-top to elements in the second row or beyond
+    @if ($vertical-gutter) {
+      &:nth-child(#{$columns + 1}) {
+        margin-top: $gutter;
+      }
+    }
+  }
+  
+}
