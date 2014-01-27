@@ -1,3 +1,4 @@
+// Keyword-based font-weights
 @function weight($keyword) {
   @if      $keyword == thin                           { @return 100; }
   @else if $keyword == extralight                     { @return 200; }
