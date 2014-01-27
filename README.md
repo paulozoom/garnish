@@ -13,8 +13,24 @@ Garnish is a collection of Sass mixins and functions designed to make your life 
 
 When you first import Garnish into your project, it doesn’t add any additional code to it. Garnish is a toolbox, and you only use what you want. It doesn’t contain any pre-defined styles, and makes no decisions for you.
 
+### Feature Index
+* **[Helpers](#helpers)**
+  * [Grayscale Colours](#grayscale-colours)
+  * [Combined Hover/Focus styles](#combined-hoverfocus-styles)
+  * [Readable Media Queries](#readable-media-queries)
+* **[Layout](#layout)**
+  * [Side Margin, Side Padding, Centering](#side-margin-side-padding-centering)
+* **[Style](#style)**
+  * [Border Sandwich](#border-sandwich)
+* **[Typography](#typography)**
+  * [Weights](#typography-weights)
+  * [Hyphenation](#typography-hyphenation)
 
-### Helper: Grayscale Colours
+----
+
+### Helpers
+
+#### Grayscale Colours
 Function that outputs gray colours based on percentage of lightness.
 
 ```SCSS
@@ -27,7 +43,7 @@ Function that outputs gray colours based on percentage of lightness.
 .olive          { color: #f7f7f7; }
 ```
 
-### Helper: Combined Hover/Focus styles
+#### Combined Hover/Focus styles
 
 Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` and `:focus` states.
 
@@ -48,7 +64,7 @@ Be nice to keyboard users. The `hover` block mixin wraps your rules in `:hover` 
 }
 ```
 
-### Helper: Readable Media Queries
+#### Readable Media Queries
 
 Friendly media queries with `media-upto`, `media-between`, and `media-from` block mixins.
 
@@ -74,7 +90,11 @@ Friendly media queries with `media-upto`, `media-between`, and `media-from` bloc
 }
 ```
 
-### Layout: Side Margin, Side Padding, Centering
+----
+
+### Layout
+
+#### Side Margin, Side Padding, Centering
 
 Short syntax mixins for either horizontal or vertical margin/padding, but not both.
 
@@ -104,7 +124,11 @@ Example:
 }
 ```
 
-### Style: Border Sandwich
+----
+
+### Style
+
+#### Border Sandwich
 
 Helps to create top and bottom dividers on a series of elements of the same type.
 
@@ -150,7 +174,11 @@ Helps to create top and bottom dividers on a series of elements of the same type
 * Desktop: Chrome 1.0+, Firefox 3.5+, IE 9.0+, Opera 9.5+, Safari 3.2+  
 * Mobile: Android 2.1+, Firefox Mobile 1.0+, IE Mobile 9.0+, Opera Mobile 10.0+, Safari Mobile 3.2+
 
-### Typography: Weights
+----
+
+### Typography
+
+#### Weights
 
 Keyword-based font-weight function. Based on Typekit’s most weight-rich typefaces.
 
@@ -180,7 +208,7 @@ Reference:
 | `extrabold`         | 800    |
 | `black`             | 900    |
 
-### Typography: Hyphenation
+#### Hyphenation
 
 Add all the vendor prefixes for hyphenation easily. 
 
