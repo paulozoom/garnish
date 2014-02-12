@@ -1,0 +1,5 @@
+{
+  "name":         "Garnish",
+  "description":  "Garnish for your Sassy CSS cocktails. Use it on top of Bourbon, or have it raw.",
+  "tags":         ["helpers", "layout", "style", "typography"]
+}
