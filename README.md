@@ -104,9 +104,9 @@ Makes a percentage-based grid in one mixin call, with optional vertical gutter (
 .container {
   @include simple-grid(4);
 }
-// Make a 6 column grid with 5% gutters and no vertical gutter
+// Make a 6 column grid with 5% gutters, floated to the left without vertical gutter
 .container {
-  @include simple-grid(6, 5%, false);
+  @include simple-grid(6, 5%, left, false);
 }
 ```
 
